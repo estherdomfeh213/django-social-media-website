@@ -53,15 +53,15 @@
                     
                             <div class="col-span-2">
                                 <label for="">Profile Image</label>
-                                <input type="file" name="image" placeholder="" class="shadow-none bg-gray-100">
+                                <input type="file" name="image" value="{{user_profile.profileing}}" class="shadow-none bg-gray-100">
                             </div>
                             <div class="col-span-2">
                                 <label for="boi">Bio</label>  
-                                <textarea id="bio" name="bio" rows="3"  class="shadow-none bg-gray-100"></textarea>
+                                <textarea id="bio" name="bio" rows="3"  class="shadow-none bg-gray-100">{{user_profile.bio}}</textarea>
                             </div> 
                             <div class="col-span-2">
                                 <label for=""> Location</label>
-                                <input type="text" name="location" placeholder="" class="shadow-none bg-gray-100">
+                                <input type="text" name="location" value="{{user_profile.location}}" class="shadow-none bg-gray-100">
                             </div>
                        </div> 
     
