@@ -47,47 +47,29 @@
                     </div>
                     <div class="bg-white rounded-md lg:shadow-lg shadow col-span-2">
     
+                    <form action="" method="POST">
+                        {% csrf_token %}
                        <div class="grid grid-cols-2 gap-3 lg:p-6 p-4">
-                           {% comment %} <div>
-                               <label for=""> First name</label>
-                               <input type="text" placeholder="Your name.." class="shadow-none bg-gray-100">
-                           </div> {% endcomment %}
-                           {% comment %} <div>
-                               <label for=""> Last name</label>
-                               <input type="text" placeholder="Your name.." class="shadow-none bg-gray-100">
-                            </div> {% endcomment %}
-                            {% comment %} <div class="col-span-2">
-                                <label for=""> Email</label>
-                                <input type="text" placeholder="Your name.." class="shadow-none bg-gray-100">
-                            </div> {% endcomment %}
+                    
                             <div class="col-span-2">
-                                <label for="about">Bio</label>  
+                                <label for="">Profile Image</label>
+                                <input type="file" name="image" placeholder="" class="shadow-none bg-gray-100">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="boi">Bio</label>  
                                 <textarea id="bio" name="bio" rows="3"  class="shadow-none bg-gray-100"></textarea>
                             </div> 
                             <div class="col-span-2">
                                 <label for=""> Location</label>
                                 <input type="text" name="location" placeholder="" class="shadow-none bg-gray-100">
                             </div>
-                            <div>
-                               <label for=""> Working at</label>
-                               <input type="text" placeholder="" class="shadow-none bg-gray-100">
-                            </div> 
-                            <div>
-                               <label for=""> Relationship </label>
-                               <select id="relationship" name="relationship"  class="shadow-none bg-gray-100">
-                                <option value="0">None</option>
-                                <option value="1">Single</option>
-                                <option value="2">In a relationship</option>
-                                <option value="3">Married</option>
-                                <option value="4">Engaged</option>
-                              </select>
-                            </div>
                        </div> 
     
                        <div class="bg-gray-10 p-6 pt-0 flex justify-end space-x-3">
-                           <button class="p-2 px-4 rounded bg-gray-50 text-red-500"> Cancel </button>
-                           <button type="button" class="button bg-blue-700"> Save </button>
+                           <button class="p-2 px-4 rounded bg-gray-50 text-red-500"> <a href="/">Cancel </button>
+                           <button type="submit" class="button bg-blue-700"> Save </button>
                        </div>
+                    </form>
     
                     </div>
 
