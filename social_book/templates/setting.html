@@ -48,25 +48,25 @@
                     <div class="bg-white rounded-md lg:shadow-lg shadow col-span-2">
     
                        <div class="grid grid-cols-2 gap-3 lg:p-6 p-4">
-                           <div>
+                           {% comment %} <div>
                                <label for=""> First name</label>
                                <input type="text" placeholder="Your name.." class="shadow-none bg-gray-100">
-                           </div>
-                           <div>
+                           </div> {% endcomment %}
+                           {% comment %} <div>
                                <label for=""> Last name</label>
                                <input type="text" placeholder="Your name.." class="shadow-none bg-gray-100">
-                            </div>
-                            <div class="col-span-2">
+                            </div> {% endcomment %}
+                            {% comment %} <div class="col-span-2">
                                 <label for=""> Email</label>
                                 <input type="text" placeholder="Your name.." class="shadow-none bg-gray-100">
-                            </div>
+                            </div> {% endcomment %}
                             <div class="col-span-2">
-                                <label for="about">About me</label>  
-                                <textarea id="about" name="about" rows="3"  class="shadow-none bg-gray-100"></textarea>
+                                <label for="about">Bio</label>  
+                                <textarea id="bio" name="bio" rows="3"  class="shadow-none bg-gray-100"></textarea>
                             </div> 
                             <div class="col-span-2">
                                 <label for=""> Location</label>
-                                <input type="text" placeholder="" class="shadow-none bg-gray-100">
+                                <input type="text" name="location" placeholder="" class="shadow-none bg-gray-100">
                             </div>
                             <div>
                                <label for=""> Working at</label>
@@ -91,7 +91,7 @@
     
                     </div>
 
-                    <div>
+                    {% comment %} <div>
                         <h3 class="text-xl mb-2"> Privacy</h3>
                         <p> </p>
                     </div>
@@ -145,7 +145,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
     
                     </div>
                     <br>
