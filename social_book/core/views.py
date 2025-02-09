@@ -1,11 +1,11 @@
-import re
-from urllib.parse import urldefrag
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .models import Profile
+from .models import Profile, Post, LikePost, FollowersCount
+from itertools import chain
+import random
   
 
 # Create your views here.
@@ -19,7 +19,14 @@ def index(request):
 @login_required(login_url='signin')
 def upload(request):
    
- i  
+   if request.method == 'POST':
+      user = request.user.username
+      image = request.FILES.get('image_upload')
+      caption = request.POST['caption']
+      
+      #! For new user upload 
+      new_post = Post.objects.create(user=user, image=image, caption=caption)
+      new_post.save()
 
 
 @login_required(login_url='signin')
