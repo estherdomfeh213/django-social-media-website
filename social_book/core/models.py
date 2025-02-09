@@ -14,6 +14,8 @@ class Profile(models.Model):
   
   class Post(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    user = models.CharField(max_length=100)
+    image = models.
   
   def __str__(self):
     return self.user.username
