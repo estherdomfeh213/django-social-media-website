@@ -13,6 +13,15 @@ from .models import Profile
 def index(request):
    return render(request, 'index.html') 
 
+
+
+#* Image upload for user 
+@login_required(login_url='signin')
+def upload(request):
+   
+ i  
+
+
 @login_required(login_url='signin')
 def settings(request):
    user_profile = Profile.objects.get(user=request.user)
